@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import meta.GraphMeta;
+import utils.Logger;
 
 public class Kosdaq implements Index {
 
@@ -100,7 +101,7 @@ public class Kosdaq implements Index {
 
       }
 
-      System.out.println("csv to json 변환 완료. dir : " + outputDir);
+      Logger.info("csv to json translation completed. dir : " + outputDir);
       return true;
     } catch(Exception e){
       e.printStackTrace();
