@@ -1,3 +1,4 @@
+import index.south_korea.Kosdaq;
 import index.south_korea.Kospi;
 
 public class Main {
@@ -7,7 +8,13 @@ public class Main {
 
     /*Kospi kospi = new Kospi();
     kospi.convertToJson(
-        "C:\\dev\\Macro-Economy-Board\\raw-data\\kospi-to-20240624.csv",
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\kospi-to-20250624.csv",
+        "C:\\dev\\Macro-Economy-Board"
+    );*/
+
+    /*Kosdaq kosdaq = new Kosdaq();
+    kosdaq.convertToJson(
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\kosdaq-to-20250624.csv",
         "C:\\dev\\Macro-Economy-Board"
     );*/
 

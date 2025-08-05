@@ -1,7 +1,11 @@
 package index.south_korea;
 
+import static constants.Constant.JSON_EXTENSION;
 import static constants.Constant.KOSPI_HEADER_LENGTH;
+import static constants.Constant.KOSPI_SUFFIX;
 import static constants.Constant.PATH_NOT_EXISTS;
+import static utils.General.getDoubleVal;
+import static utils.General.getLongVal;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -21,7 +25,7 @@ import meta.GraphMeta;
 
 public class Kospi implements Index {
 
-  private class KospiData {
+  private static class KospiData {
     public String time;
     public double open;
     public double high;
@@ -53,7 +57,10 @@ public class Kospi implements Index {
       Map<Integer, List<KospiData>> yearMap = new TreeMap<>();
 
       try ( BufferedReader br = Files.newBufferedReader(inputCsv) ){
+
+        // TODO : 이 헤더는 나중에 메타데이터 만들 때 활용한다.
         String header = br.readLine();
+
         String line;
 
         while( (line = br.readLine()) != null ){
@@ -69,11 +76,11 @@ public class Kospi implements Index {
 
           KospiData data = new KospiData(
               dateStr,
-              parseDouble(tokens[1]),
-              parseDouble(tokens[2]),
-              parseDouble(tokens[3]),
-              parseDouble(tokens[4]),
-              parseLong(tokens[5])
+              getDoubleVal(tokens[1]),
+              getDoubleVal(tokens[2]),
+              getDoubleVal(tokens[3]),
+              getDoubleVal(tokens[4]),
+              getLongVal(tokens[5])
           );
 
           yearMap.computeIfAbsent(year, y -> new ArrayList<>()).add(data);
@@ -86,7 +93,7 @@ public class Kospi implements Index {
         int year = entry.getKey();
         List<KospiData> yearData = entry.getValue();
 
-        Path outputFile = outputDir.resolve(year + "_kospi.json");
+        Path outputFile = outputDir.resolve(year + KOSPI_SUFFIX + JSON_EXTENSION);
 
         try(Writer writer = Files.newBufferedWriter(outputFile)){
           gson.toJson(yearData, writer);
@@ -112,21 +119,5 @@ public class Kospi implements Index {
   public boolean loadToOriginStorage(String dir) {
     // TODO : 나중에 S3 클라이언트 호출해야 한다.
     return false;
-  }
-
-  private static double parseDouble(String str) {
-    try {
-      return Double.parseDouble(str);
-    } catch (Exception e) {
-      return 0.0;
-    }
-  }
-
-  private static long parseLong(String str) {
-    try {
-      return Long.parseLong(str);
-    } catch (Exception e) {
-      return 0L;
-    }
   }
 }

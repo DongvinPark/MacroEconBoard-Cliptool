@@ -15,4 +15,9 @@ public class Constant {
 
   // kospi
   public static final int KOSPI_HEADER_LENGTH = 8;
+  public static final String KOSPI_SUFFIX = "_kospi";
+
+  // kosdaq
+  public static final int KOSDAU_HEADER_LENGTH = 8;
+  public static final String KOSDAQ_SUFFIX = "_kosdaq";
 }
