@@ -7,7 +7,7 @@ import meta.GraphMeta;
 public class BondRate5Year implements Index {
 
   @Override
-  public boolean convertToJson(String csvPath, String jsonPath) {
+  public boolean convertToJson(String csvPath, String jsonDirPath) {
     return false;
   }
 

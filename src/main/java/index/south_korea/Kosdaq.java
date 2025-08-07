@@ -45,13 +45,13 @@ public class Kosdaq implements Index {
   }
 
   @Override
-  public boolean convertToJson(String csvPath, String jsonPath) {
+  public boolean convertToJson(String csvPath, String jsonDirPath) {
     try {
       Path inputCsv  = Paths.get(csvPath);
-      Path outputDir = Paths.get(jsonPath);
+      Path outputDir = Paths.get(jsonDirPath);
 
       if (!Files.exists(outputDir)){
-        System.out.println(PATH_NOT_EXISTS);
+        Logger.error(PATH_NOT_EXISTS);
         return false;
       }
 

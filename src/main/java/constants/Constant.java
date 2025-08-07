@@ -23,5 +23,6 @@ public class Constant {
 
   // bond 3 yaers
   public static final int BOND_HEADER_LENGTH = 2;
-  public static final String BOND_3YAR__EXCEL_TO_CSV_SUFFIX = "_3y_boand";
+  public static final String BOND_3_YAR_EXCEL_TO_CSV_SUFFIX = "_3y_bond";
+  public static final String BOND_3_YEAR_JSON_SUFFIX = "_3y_bond";
 }

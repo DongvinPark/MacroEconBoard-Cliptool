@@ -17,6 +17,10 @@ dependencies {
     // json
     implementation 'com.google.code.gson:gson:2.10.1'
 
+    // logging
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    // test
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

@@ -1,3 +1,4 @@
+import index.south_korea.BondRate3Year;
 import index.south_korea.Kosdaq;
 import index.south_korea.Kospi;
 
@@ -15,6 +16,12 @@ public class Main {
     /*Kosdaq kosdaq = new Kosdaq();
     kosdaq.convertToJson(
         "C:\\dev\\Macro-Economy-Board\\raw-data\\kosdaq-to-20250624.csv",
+        "C:\\dev\\Macro-Economy-Board"
+    );*/
+
+    /*BondRate3Year bondRate3Year = new BondRate3Year();
+    bondRate3Year.convertToJson(
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\국고채3년이자율1995-1997.xls",
         "C:\\dev\\Macro-Economy-Board"
     );*/
 
