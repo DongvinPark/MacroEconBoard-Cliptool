@@ -15,14 +15,14 @@ public class Constant {
 
   // kospi
   public static final int KOSPI_HEADER_LENGTH = 8;
-  public static final String KOSPI_SUFFIX = "_kospi";
+  public static final String KOSPI_SUFFIX = "-kospi";
 
   // kosdaq
   public static final int KOSDAU_HEADER_LENGTH = 8;
-  public static final String KOSDAQ_SUFFIX = "_kosdaq";
+  public static final String KOSDAQ_SUFFIX = "-kosdaq";
 
   // bond 3 yaers
   public static final int BOND_HEADER_LENGTH = 2;
-  public static final String BOND_3_YAR_EXCEL_TO_CSV_SUFFIX = "_3y_bond";
-  public static final String BOND_3_YEAR_JSON_SUFFIX = "_3y_bond";
+  public static final String BOND_3_YAR_EXCEL_TO_CSV_SUFFIX = "-3y-bond";
+  public static final String BOND_3_YEAR_JSON_SUFFIX = "-3y-bond";
 }
