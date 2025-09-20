@@ -1,4 +1,4 @@
-package index.south_korea;
+package index.KR.interest;
 
 import index.Index;
 import java.time.temporal.ChronoUnit;

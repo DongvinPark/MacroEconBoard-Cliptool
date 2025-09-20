@@ -1,4 +1,4 @@
-package index.south_korea;
+package index.KR.stock;
 
 import static constants.Constant.JSON_EXTENSION;
 import static constants.Constant.KOSDAQ_SUFFIX;

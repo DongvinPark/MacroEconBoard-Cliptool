@@ -1,7 +1,3 @@
-import index.south_korea.BondRate3Year;
-import index.south_korea.Kosdaq;
-import index.south_korea.Kospi;
-
 public class Main {
   public static void main(String[] args){
 

@@ -1,4 +1,4 @@
-package index.south_korea;
+package index.KR.interest;
 
 import static constants.Constant.BOND_3_YAR_EXCEL_TO_CSV_SUFFIX;
 import static constants.Constant.BOND_3_YEAR_JSON_SUFFIX;
@@ -11,8 +11,8 @@ import static utils.General.removeQuotationMarks;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import index.Index;
-import index.south_korea.dto.BondDto;
-import index.south_korea.dto.BondDtoForJson;
+import index.KR.dto.BondDto;
+import index.KR.dto.BondDtoForJson;
 import java.io.BufferedReader;
 import java.io.Writer;
 import java.nio.file.Files;

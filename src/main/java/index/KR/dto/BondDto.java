@@ -1,4 +1,4 @@
-package index.south_korea.dto;
+package index.KR.dto;
 
 import java.time.LocalDate;
 

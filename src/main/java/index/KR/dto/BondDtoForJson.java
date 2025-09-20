@@ -1,6 +1,4 @@
-package index.south_korea.dto;
-
-import java.time.LocalDate;
+package index.KR.dto;
 
 public class BondDtoForJson {
   public String time;
