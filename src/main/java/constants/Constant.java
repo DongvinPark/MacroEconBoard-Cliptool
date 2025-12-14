@@ -21,8 +21,12 @@ public class Constant {
   public static final int KOSDAU_HEADER_LENGTH = 8;
   public static final String KOSDAQ_SUFFIX = "-kosdaq";
 
-  // bond 3 yaers
+  // kr bond 3 yaers
   public static final int BOND_HEADER_LENGTH = 2;
   public static final String BOND_3_YAR_EXCEL_TO_CSV_SUFFIX = "-3y-bond";
   public static final String BOND_3_YEAR_JSON_SUFFIX = "-kr-bond-3y";
+
+  // kr bond 10 years
+  public static final String BOND_10_YAR_EXCEL_TO_CSV_SUFFIX = "-10y-bond";
+  public static final String BOND_10_YEAR_JSON_SUFFIX = "-kr-bond-10y";
 }

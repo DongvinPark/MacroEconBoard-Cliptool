@@ -19,13 +19,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import meta.GraphMeta;
 import utils.ExcelToCsv;
 import utils.Logger;
 
@@ -45,13 +43,11 @@ public class BondRate3Year implements Index {
     }
 
     try {
-      // TODO : implement later
       Path inputCsv = Paths.get(csvPath);
       Path outputDir = Paths.get(jsonDirPath);
 
       try ( BufferedReader br = Files.newBufferedReader(inputCsv) ) {
 
-        // TODO : 이 헤더는 나중에 메타데이터 만들 때 활용한다.
         String header1 = br.readLine();
         String header2 = br.readLine();
         String header3 = br.readLine();
@@ -114,18 +110,6 @@ public class BondRate3Year implements Index {
       e.printStackTrace();
       return false;
     }
-  }
-
-  @Override
-  public GraphMeta buildGraphMeta(String graphName, String yAxisUnit, ChronoUnit timeUnit) {
-    // TODO : json들 업로드할 때 같이 업로드 한다. 단, 이미 S3에 업로드 돼 있을 때는 제외.
-    return null;
-  }
-
-  @Override
-  public boolean loadToOriginStorage(String dir) {
-    // TODO : 나중에 S3 클라이언트 호출해야 한다.
-    return false;
   }
 
 }

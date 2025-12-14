@@ -1,3 +1,6 @@
+import index.KR.interest.BondRate10Year;
+import index.KR.interest.BondRate3Year;
+
 public class Main {
   public static void main(String[] args){
 
@@ -20,7 +23,14 @@ public class Main {
     BondRate3Year bondRate3Year = new BondRate3Year();
     bondRate3Year.convertToJson(
         "C:\\dev\\Macro-Economy-Board\\raw-data\\국고채3년이자율2022-20250623.xls",
-        "C:\\dev\\Macro-Economy-Board"
+        "C:\\dev\\Macro-Economy-Board\\raw-data"
+    );*/
+
+    /*
+    BondRate10Year bondRate10Year = new BondRate10Year();
+    bondRate10Year.convertToJson(
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\국고채10년이자율2020-20250623.xls",
+        "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
   }// end of main

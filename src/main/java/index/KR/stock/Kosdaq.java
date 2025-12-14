@@ -109,15 +109,4 @@ public class Kosdaq implements Index {
     }
   }
 
-  @Override
-  public GraphMeta buildGraphMeta(String graphName, String yAxisUnit, ChronoUnit timeUnit) {
-    // TODO : json들 업로드할 때 같이 업로드 한다. 단, 이미 S3에 업로드 돼 있을 때는 제외.
-    return null;
-  }
-
-  @Override
-  public boolean loadToOriginStorage(String dir) {
-    // TODO : 나중에 S3 클라이언트 호출해야 한다.
-    return false;
-  }
 }
