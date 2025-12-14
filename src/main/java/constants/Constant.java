@@ -29,4 +29,8 @@ public class Constant {
   // kr bond 10 years
   public static final String BOND_10_YAR_EXCEL_TO_CSV_SUFFIX = "-10y-bond";
   public static final String BOND_10_YEAR_JSON_SUFFIX = "-kr-bond-10y";
+
+  public static final int WON_DOLLAR_EXCHANGE_RATE_HEADER_LENGTH = 2;
+  public static final String WON_DOLLAR_EXCHANGE_RATE_EXCEL_TO_CSV_SUFFIX = "-won-dollar";
+  public static final String WON_DOLLAR_EXCHANGE_RATE_JSON_SUFFIX = "-won-dollar";
 }

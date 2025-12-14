@@ -1,3 +1,4 @@
+import index.KR.exchange_rate.WonDollar;
 import index.KR.interest.BondRate10Year;
 import index.KR.interest.BondRate3Year;
 
@@ -30,6 +31,13 @@ public class Main {
     BondRate10Year bondRate10Year = new BondRate10Year();
     bondRate10Year.convertToJson(
         "C:\\dev\\Macro-Economy-Board\\raw-data\\국고채10년이자율2020-20250623.xls",
+        "C:\\dev\\Macro-Economy-Board\\raw-data"
+    );*/
+
+    /*
+    WonDollar wonDollar = new WonDollar();
+    wonDollar.convertToJson(
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\원_달러 환율 및 원화 명목실효환율 지수.xlsx",
         "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
