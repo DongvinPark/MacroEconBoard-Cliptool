@@ -30,7 +30,13 @@ public class Constant {
   public static final String BOND_10_YAR_EXCEL_TO_CSV_SUFFIX = "-10y-bond";
   public static final String BOND_10_YEAR_JSON_SUFFIX = "-kr-bond-10y";
 
+  // won dollar exchange rate
   public static final int WON_DOLLAR_EXCHANGE_RATE_HEADER_LENGTH = 2;
   public static final String WON_DOLLAR_EXCHANGE_RATE_EXCEL_TO_CSV_SUFFIX = "-won-dollar";
   public static final String WON_DOLLAR_EXCHANGE_RATE_JSON_SUFFIX = "-won-dollar";
+
+  // Bank Of Korea base interest rate
+  // TODO : 2027년 12월 11일 만기다.
+  public static final String BANK_OF_KOREA_OPENAPI_KEY = "4T1SINIS1H67ISYV0RBI";
+  public static final String KR_BASE_INTEREST_RATE_JSON_SUFFIX = "-kr-base-interest-rate";
 }
