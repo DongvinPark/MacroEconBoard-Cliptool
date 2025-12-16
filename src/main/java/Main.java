@@ -1,4 +1,5 @@
 import index.KR.exchange_rate.WonDollar;
+import index.KR.interest.BaseInterestRate;
 import index.KR.interest.BondRate10Year;
 import index.KR.interest.BondRate3Year;
 
@@ -40,6 +41,12 @@ public class Main {
         "C:\\dev\\Macro-Economy-Board\\raw-data\\원_달러 환율 및 원화 명목실효환율 지수.xlsx",
         "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
+
+    BaseInterestRate baseInterestRate = new BaseInterestRate();
+    baseInterestRate.convertToJson(
+        "/Users/dongvin99/Documents/Macro-Economy-Board/MacroEconBoard-Cliptool/kr-base-interest-rate-record.csv",
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+    );
 
   }// end of main
 }// Main class

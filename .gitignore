@@ -18,6 +18,7 @@ application.yaml
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.name
 
 ### Eclipse ###
 .apt_generated
