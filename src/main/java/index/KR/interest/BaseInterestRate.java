@@ -105,15 +105,12 @@ public class BaseInterestRate implements Index {
 
     for (int i = 0; i < changeRecordList.size(); i++) {
       List<LocalDate> targetDates = null;
-      double value;
-      if(i < (changeRecordList.size()-1)){
-        value = changeRecordList.get(i).value;
+      double value = changeRecordList.get(i).value;
         LocalDate start = changeRecordList.get(i).time;
+      if(i < (changeRecordList.size()-1)){
         LocalDate end = changeRecordList.get(i+1).time;
         targetDates = getRangeDate(start, end);
       } else {
-        value = changeRecordList.get(i).value;
-        LocalDate start = changeRecordList.get(i).time;
         LocalDate today = LocalDate.now(ZoneId.of("Asia/Seoul"));
         targetDates = getRangeDate(start, today);
       }

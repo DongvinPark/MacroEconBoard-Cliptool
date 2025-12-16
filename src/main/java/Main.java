@@ -42,11 +42,12 @@ public class Main {
         "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
+    /*
     BaseInterestRate baseInterestRate = new BaseInterestRate();
     baseInterestRate.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/MacroEconBoard-Cliptool/kr-base-interest-rate-record.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
-    );
+        "C:\\dev\\Macro-Economy-Board\\data-batch-updater\\meboard-updater\\kr-base-interest-rate-record.csv",
+        "C:\\dev\\Macro-Economy-Board\\raw-data"
+    );*/
 
   }// end of main
 }// Main class
