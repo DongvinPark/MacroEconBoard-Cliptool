@@ -1,9 +1,6 @@
 package index.KR.stock;
 
-import static constants.Constant.JSON_EXTENSION;
-import static constants.Constant.KOSDAQ_SUFFIX;
-import static constants.Constant.KOSPI_HEADER_LENGTH;
-import static constants.Constant.PATH_NOT_EXISTS;
+import static constants.Constant.*;
 import static utils.General.getDoubleVal;
 import static utils.General.getLongVal;
 
@@ -16,12 +13,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import meta.GraphMeta;
+
 import utils.Logger;
 
 public class Kosdaq implements Index {
@@ -34,7 +30,9 @@ public class Kosdaq implements Index {
     public double close;
     public long volume;
 
-    public KosdaqData(String time, double open, double high, double low, double close, long volume) {
+    public KosdaqData(
+        String time, double open, double high, double low, double close, long volume
+    ) {
       this.time = time;
       this.open = open;
       this.high = high;
@@ -51,7 +49,7 @@ public class Kosdaq implements Index {
       Path outputDir = Paths.get(jsonDirPath);
 
       if (!Files.exists(outputDir)){
-        Logger.error(PATH_NOT_EXISTS);
+        Logger.error(PATH_NOT_EXISTS + ":" + jsonDirPath);
         return false;
       }
 
@@ -59,14 +57,13 @@ public class Kosdaq implements Index {
 
       try ( BufferedReader br = Files.newBufferedReader(inputCsv) ){
 
-        // TODO : 이 헤더는 나중에 메타데이터 만들 때 활용한다.
         String header = br.readLine();
         String line;
 
         while( (line = br.readLine()) != null ){
           String[] tokens = line.split(",");
 
-          if(tokens.length < KOSPI_HEADER_LENGTH){
+          if(tokens.length < KOSDAU_HEADER_LENGTH){
             continue;
           }
 
@@ -93,7 +90,7 @@ public class Kosdaq implements Index {
         int year = entry.getKey();
         List<KosdaqData> yearData = entry.getValue();
 
-        Path outputFile = outputDir.resolve(year + KOSDAQ_SUFFIX + JSON_EXTENSION);
+        Path outputFile = outputDir.resolve(year + KOSDAQ_JSON_SUFFIX + JSON_EXTENSION);
 
         try(Writer writer = Files.newBufferedWriter(outputFile)){
           gson.toJson(yearData, writer);

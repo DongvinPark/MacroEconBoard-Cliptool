@@ -2,6 +2,7 @@ import index.KR.exchange_rate.WonDollar;
 import index.KR.interest.BaseInterestRate;
 import index.KR.interest.BondRate10Year;
 import index.KR.interest.BondRate3Year;
+import index.US.origin_bitcoin.BitcoinOriginal;
 
 public class Main {
   public static void main(String[] args){
@@ -47,6 +48,13 @@ public class Main {
     baseInterestRate.convertToJson(
         "C:\\dev\\Macro-Economy-Board\\data-batch-updater\\meboard-updater\\kr-base-interest-rate-record.csv",
         "C:\\dev\\Macro-Economy-Board\\raw-data"
+    );*/
+
+    /*
+    BitcoinOriginal bitcoinOriginal = new BitcoinOriginal();
+    bitcoinOriginal.convertToJson(
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/btc_daily_data.csv",
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
     );*/
 
   }// end of main

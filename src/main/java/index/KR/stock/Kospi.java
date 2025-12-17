@@ -2,7 +2,7 @@ package index.KR.stock;
 
 import static constants.Constant.JSON_EXTENSION;
 import static constants.Constant.KOSPI_HEADER_LENGTH;
-import static constants.Constant.KOSPI_SUFFIX;
+import static constants.Constant.KOSPI_JSON_SUFFIX;
 import static constants.Constant.PATH_NOT_EXISTS;
 import static utils.General.getDoubleVal;
 import static utils.General.getLongVal;
@@ -16,12 +16,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import meta.GraphMeta;
+
 import utils.Logger;
 
 public class Kospi implements Index {
@@ -34,7 +33,9 @@ public class Kospi implements Index {
     public double close;
     public long volume;
 
-    public KospiData(String time, double open, double high, double low, double close, long volume) {
+    public KospiData(
+        String time, double open, double high, double low, double close, long volume
+    ) {
       this.time = time;
       this.open = open;
       this.high = high;
@@ -51,7 +52,7 @@ public class Kospi implements Index {
       Path outputDir = Paths.get(jsonDirPath);
 
       if (!Files.exists(outputDir)){
-        Logger.error(PATH_NOT_EXISTS);
+        Logger.error(PATH_NOT_EXISTS + ":" + jsonDirPath);
         return false;
       }
 
@@ -59,7 +60,6 @@ public class Kospi implements Index {
 
       try ( BufferedReader br = Files.newBufferedReader(inputCsv) ){
 
-        // TODO : 이 헤더는 나중에 메타데이터 만들 때 활용한다.
         String header = br.readLine();
 
         String line;
@@ -94,7 +94,7 @@ public class Kospi implements Index {
         int year = entry.getKey();
         List<KospiData> yearData = entry.getValue();
 
-        Path outputFile = outputDir.resolve(year + KOSPI_SUFFIX + JSON_EXTENSION);
+        Path outputFile = outputDir.resolve(year + KOSPI_JSON_SUFFIX + JSON_EXTENSION);
 
         try(Writer writer = Files.newBufferedWriter(outputFile)){
           gson.toJson(yearData, writer);

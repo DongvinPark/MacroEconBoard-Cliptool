@@ -15,11 +15,11 @@ public class Constant {
 
   // kospi
   public static final int KOSPI_HEADER_LENGTH = 8;
-  public static final String KOSPI_SUFFIX = "-kospi";
+  public static final String KOSPI_JSON_SUFFIX = "-kospi";
 
   // kosdaq
   public static final int KOSDAU_HEADER_LENGTH = 8;
-  public static final String KOSDAQ_SUFFIX = "-kosdaq";
+  public static final String KOSDAQ_JSON_SUFFIX = "-kosdaq";
 
   // kr bond 3 yaers
   public static final int BOND_HEADER_LENGTH = 2;
@@ -41,4 +41,8 @@ public class Constant {
   public static final String BR_BASE_INTEREST_RATE_FIRST_RECORD_DATE = "1999-05-06";
   public static final String BANK_OF_KOREA_OPENAPI_KEY = "4T1SINIS1H67ISYV0RBI"; // TODO : 2027년 12월 11일 만기다.
   public static final String KR_BASE_INTEREST_RATE_JSON_SUFFIX = "-kr-base-interest-rate";
+
+  // Original BTC Bitcoin
+  public static final int BTC_CSV_HEADER_LENGTH = 8;
+  public static final String BTC_JSON_SUFFIX = "-btc-original";
 }
