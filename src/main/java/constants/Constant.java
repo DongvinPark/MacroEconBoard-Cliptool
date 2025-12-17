@@ -45,4 +45,12 @@ public class Constant {
   // Original BTC Bitcoin
   public static final int BTC_CSV_HEADER_LENGTH = 8;
   public static final String BTC_JSON_SUFFIX = "-btc-original";
+
+  // S&P 500
+  public static final int SNP500_CSV_HEADER_LENGTH = 8;
+  public static final String SNP500_JSON_SUFFIX = "-snp-500";
+
+  // NASDAQ Composite
+  public static final int NASDAQ_CSV_HEADER_LENGTH = 8;
+  public static final String NASDAQ_JSON_SUFFIX = "-nasdaq";
 }

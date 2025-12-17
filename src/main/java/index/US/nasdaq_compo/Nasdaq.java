@@ -1,8 +1,9 @@
-package index.US.origin_bitcoin;
+package index.US.nasdaq_compo;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import index.Index;
+import index.US.origin_bitcoin.BitcoinOriginal;
 import utils.Logger;
 
 import java.io.BufferedReader;
@@ -21,9 +22,9 @@ import static constants.Constant.JSON_EXTENSION;
 import static utils.General.getDoubleVal;
 import static utils.General.getLongVal;
 
-public class BitcoinOriginal implements Index {
+public class Nasdaq implements Index {
 
-  private static class BtcData {
+  private static class NasdaqData {
     public String time;
     public double open;
     public double high;
@@ -31,7 +32,7 @@ public class BitcoinOriginal implements Index {
     public double close;
     public long volume;
 
-    public BtcData(
+    public NasdaqData(
         String time, double open, double high, double low, double close, long volume
     ) {
       this.time = time;
@@ -54,7 +55,7 @@ public class BitcoinOriginal implements Index {
         return false;
       }
 
-      Map<Integer, List<BtcData>> yearMap = new TreeMap<>();
+      Map<Integer, List<Nasdaq.NasdaqData>> yearMap = new TreeMap<>();
 
       try ( BufferedReader br = Files.newBufferedReader(inputCsv) ){
         String header = br.readLine();
@@ -63,7 +64,7 @@ public class BitcoinOriginal implements Index {
         while((line = br.readLine()) != null){
           String[] token = line.split(",");
 
-          if(token.length < BTC_CSV_HEADER_LENGTH){
+          if(token.length < NASDAQ_CSV_HEADER_LENGTH){
             continue;
           }
 
@@ -71,7 +72,7 @@ public class BitcoinOriginal implements Index {
           LocalDate date = LocalDate.parse(dateStr);
           int year = date.getYear();
 
-          BtcData data = new BtcData(
+          Nasdaq.NasdaqData data = new Nasdaq.NasdaqData(
               dateStr,
               getDoubleVal(token[1]),
               getDoubleVal(token[2]),
@@ -86,11 +87,11 @@ public class BitcoinOriginal implements Index {
 
       Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-      for ( Map.Entry<Integer, List<BitcoinOriginal.BtcData>> entry : yearMap.entrySet()){
+      for ( Map.Entry<Integer, List<Nasdaq.NasdaqData>> entry : yearMap.entrySet()){
         int year = entry.getKey();
-        List<BitcoinOriginal.BtcData> yearData = entry.getValue();
+        List<Nasdaq.NasdaqData> yearData = entry.getValue();
 
-        Path outputFile = outputDir.resolve(year + BTC_JSON_SUFFIX + JSON_EXTENSION);
+        Path outputFile = outputDir.resolve(year + NASDAQ_JSON_SUFFIX + JSON_EXTENSION);
 
         try(Writer writer = Files.newBufferedWriter(outputFile)){
           gson.toJson(yearData, writer);
@@ -105,43 +106,4 @@ public class BitcoinOriginal implements Index {
       return false;
     }
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
