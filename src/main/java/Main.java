@@ -55,22 +55,22 @@ public class Main {
     /*
     BitcoinOriginal bitcoinOriginal = new BitcoinOriginal();
     bitcoinOriginal.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/btc_daily_data.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+            "C:\\dev\\Macro-Economy-Board\\raw-data\\btc_daily_data.csv",
+            "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
     /*
     SnP500 snP500 = new SnP500();
     snP500.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/snp500_daily_data.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+            "C:\\dev\\Macro-Economy-Board\\raw-data\\snp500_daily_data.csv",
+            "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
     /*
     Nasdaq nasdaq = new Nasdaq();
     nasdaq.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/nasdaq_daily_data.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+            "C:\\dev\\Macro-Economy-Board\\raw-data\\nasdaq_daily_data.csv",
+            "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
   }// end of main
