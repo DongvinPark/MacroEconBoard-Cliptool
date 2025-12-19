@@ -53,4 +53,8 @@ public class Constant {
   // NASDAQ Composite
   public static final int NASDAQ_CSV_HEADER_LENGTH = 8;
   public static final String NASDAQ_JSON_SUFFIX = "-nasdaq";
+
+  // US Base Interest Rate
+  public static final int US_FEDERAL_FUNDS_RATE_CSV_HEADER_LENGTH = 2;
+  public static final String US_FEDERAL_FUNDS_RATE_JSON_SUFFIX = "-us-base-interest-rate";
 }
