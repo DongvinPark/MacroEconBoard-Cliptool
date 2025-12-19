@@ -57,4 +57,12 @@ public class Constant {
   // US Base Interest Rate
   public static final int US_FEDERAL_FUNDS_RATE_CSV_HEADER_LENGTH = 2;
   public static final String US_FEDERAL_FUNDS_RATE_JSON_SUFFIX = "-us-base-interest-rate";
+
+  // US 3 year Treasury Rate
+  public static final int US_BOND_3Y_CSV_HEADER_LENGTH = 2;
+  public static final String US_BOND_3Y_RATE_JSON_SUFFIX = "-us-bond-3y";
+
+  // US 10 year Treasury Rate
+  public static final int US_BOND_10Y_CSV_HEADER_LENGTH = 2;
+  public static final String US_BOND_10Y_RATE_JSON_SUFFIX = "-us-bond-10y";
 }

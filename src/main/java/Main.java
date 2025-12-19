@@ -3,6 +3,8 @@ import index.KR.interest.BaseInterestRate;
 import index.KR.interest.BondRate10Year;
 import index.KR.interest.BondRate3Year;
 import index.US.interest.FederalFundsRate;
+import index.US.interest.UsBondRate10Year;
+import index.US.interest.UsBondRate3Year;
 import index.US.nasdaq_compo.Nasdaq;
 import index.US.origin_bitcoin.BitcoinOriginal;
 import index.US.snp500.SnP500;
@@ -78,6 +80,20 @@ public class Main {
     FederalFundsRate federalFundsRate = new FederalFundsRate();
     federalFundsRate.convertToJson(
         "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/us_fed_rate.csv",
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+    );*/
+
+    /*
+    UsBondRate3Year usBondRate3Year = new UsBondRate3Year();
+    usBondRate3Year.convertToJson(
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/us_treasury_3y.csv",
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+    );*/
+
+    /*
+    UsBondRate10Year usBondRate10Year = new UsBondRate10Year();
+    usBondRate10Year.convertToJson(
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/us_treasury_10y.csv",
         "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
     );*/
 
