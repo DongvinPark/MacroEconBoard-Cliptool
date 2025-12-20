@@ -79,22 +79,22 @@ public class Main {
     /*
     FederalFundsRate federalFundsRate = new FederalFundsRate();
     federalFundsRate.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/us_fed_rate.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\us_fed_rate.csv",
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\"
     );*/
 
     /*
     UsBondRate3Year usBondRate3Year = new UsBondRate3Year();
     usBondRate3Year.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/us_treasury_3y.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\us_treasury_3y.csv",
+        "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
     /*
     UsBondRate10Year usBondRate10Year = new UsBondRate10Year();
     usBondRate10Year.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/us_treasury_10y.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\us_treasury_10y.csv",
+        "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
   }// end of main
