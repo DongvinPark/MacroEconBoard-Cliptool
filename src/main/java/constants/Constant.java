@@ -65,4 +65,8 @@ public class Constant {
   // US 10 year Treasury Rate
   public static final int US_BOND_10Y_CSV_HEADER_LENGTH = 2;
   public static final String US_BOND_10Y_RATE_JSON_SUFFIX = "-us-bond-10y";
+
+  // COMEX GOLD FUTURE
+  public static final int GOLD_FUTURE_CSV_HEADER_LENGTH = 2;
+  public static final String GOLD_FUTURE_JSON_SUFFIX = "-gold-price-comex";
 }

@@ -7,6 +7,7 @@ import index.US.interest.UsBondRate10Year;
 import index.US.interest.UsBondRate3Year;
 import index.US.nasdaq_compo.Nasdaq;
 import index.US.origin_bitcoin.BitcoinOriginal;
+import index.US.raw_materials.ComexGoldFuture;
 import index.US.snp500.SnP500;
 
 public class Main {
@@ -94,6 +95,13 @@ public class Main {
     UsBondRate10Year usBondRate10Year = new UsBondRate10Year();
     usBondRate10Year.convertToJson(
         "C:\\dev\\Macro-Economy-Board\\raw-data\\us_treasury_10y.csv",
+        "C:\\dev\\Macro-Economy-Board\\raw-data"
+    );*/
+
+    /*
+    ComexGoldFuture comexGoldFuture = new ComexGoldFuture();
+    comexGoldFuture.convertToJson(
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\gold_future_comex.csv",
         "C:\\dev\\Macro-Economy-Board\\raw-data"
     );*/
 
