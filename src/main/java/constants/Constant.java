@@ -35,6 +35,10 @@ public class Constant {
   public static final String WON_DOLLAR_EXCHANGE_RATE_EXCEL_TO_CSV_SUFFIX = "-won-dollar";
   public static final String WON_DOLLAR_EXCHANGE_RATE_JSON_SUFFIX = "-won-dollar";
 
+  // KRX Gold 99.99 1KG
+  public static final int KRX_GOLD_1KG_CSV_HEADER_LENGTH = 9;
+  public static final String KRX_GOLD_1KG_JSON_SUFFIX = "-krx-gold-spot-1kg";
+
   // Bank Of Korea base interest rate
   public static final int BASE_INTEREST_RATE_RECORD_CSV_HEADER_LENGTH = 3;
   public static final int BR_BASE_INTEREST_RATE_FIRST_RECORD_YEAR = 1999;

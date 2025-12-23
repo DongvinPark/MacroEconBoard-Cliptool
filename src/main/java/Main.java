@@ -2,6 +2,7 @@ import index.KR.exchange_rate.WonDollar;
 import index.KR.interest.BaseInterestRate;
 import index.KR.interest.BondRate10Year;
 import index.KR.interest.BondRate3Year;
+import index.KR.raw_materials.KrxGold1KG;
 import index.US.interest.FederalFundsRate;
 import index.US.interest.UsBondRate10Year;
 import index.US.interest.UsBondRate3Year;
@@ -103,6 +104,13 @@ public class Main {
     comexGoldFuture.convertToJson(
         "C:\\dev\\Macro-Economy-Board\\raw-data\\gold_future_comex.csv",
         "C:\\dev\\Macro-Economy-Board\\raw-data"
+    );*/
+
+    /*
+    KrxGold1KG krxGold1KG = new KrxGold1KG();
+    krxGold1KG.convertToJson(
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/krx-gold-2024-2025.csv",
+        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
     );*/
 
   }// end of main
