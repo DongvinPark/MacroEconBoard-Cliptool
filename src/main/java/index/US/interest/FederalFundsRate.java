@@ -47,7 +47,9 @@ public class FederalFundsRate implements Index {
           );
         }//wh
 
+        // 날짜 오름차순 정렬.
         dtoList.sort(Comparator.comparing(b -> b.time));
+
         Map<Integer, List<FederalFundsRateDto>> yearMap = new TreeMap<>();
         for (FederalFundsRateDto dto : dtoList) {
           int year = dto.time.getYear();

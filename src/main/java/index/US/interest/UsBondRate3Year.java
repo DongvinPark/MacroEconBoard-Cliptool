@@ -45,7 +45,9 @@ public class UsBondRate3Year implements Index {
           );
         }//wh
 
+        // 날짜 오름차순 정렬.
         dtoList.sort(Comparator.comparing(b -> b.time));
+
         Map<Integer, List<UsBondDto>> yearMap = new TreeMap<>();
         for (UsBondDto dto : dtoList) {
           int year = dto.time.getYear();

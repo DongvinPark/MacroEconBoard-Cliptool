@@ -90,6 +90,7 @@ public class KrxGold1KG implements Index {
         int year = entry.getKey();
         List<KrxGold1KG.KrxGold1KgData> yearData = entry.getValue();
 
+        // 날짜 오름차순 정렬
         yearData.sort((a,b) -> {
           LocalDate before = LocalDate.parse(a.time);
           LocalDate after = LocalDate.parse(b.time);

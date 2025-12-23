@@ -46,7 +46,9 @@ public class ComexGoldFuture implements Index {
           );
         }//wh
 
+        // 날짜 오름차순 정렬.
         dtoList.sort(Comparator.comparing(b -> b.time));
+
         Map<Integer, List<GoldFutureDto>> yearMap = new TreeMap<>();
         for (GoldFutureDto dto : dtoList) {
           int year = dto.time.getYear();

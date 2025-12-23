@@ -90,6 +90,13 @@ public class BitcoinOriginal implements Index {
         int year = entry.getKey();
         List<BitcoinOriginal.BtcData> yearData = entry.getValue();
 
+        // 날짜 오름차순 정렬.
+        yearData.sort((a,b) -> {
+          LocalDate before = LocalDate.parse(a.time);
+          LocalDate after = LocalDate.parse(b.time);
+          return before.compareTo(after);
+        });
+
         Path outputFile = outputDir.resolve(year + BTC_JSON_SUFFIX + JSON_EXTENSION);
 
         try(Writer writer = Files.newBufferedWriter(outputFile)){

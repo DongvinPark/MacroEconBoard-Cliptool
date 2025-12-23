@@ -73,7 +73,9 @@ public class BondRate10Year implements Index {
           );
         }//wh
 
+        // 날짜 오름차순 정렬
         dtoList.sort(Comparator.comparing(b -> b.time));
+
         Map<Integer, List<BondDto>> yearMap = new TreeMap<>();
         for (BondDto dto : dtoList) {
           int year = dto.time.getYear();

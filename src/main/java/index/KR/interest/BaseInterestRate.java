@@ -53,7 +53,7 @@ public class BaseInterestRate implements Index {
           );
         }//wh
 
-        // 날짜 오름차순 정렬
+        // 날짜 오름차순 정렬 필요.
         interestChangeRecordList.sort(Comparator.comparing(a -> a.time));
 
         List<BaseInterestDto> allDtoList
