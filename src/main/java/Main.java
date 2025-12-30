@@ -109,8 +109,8 @@ public class Main {
     /*
     KrxGold1KG krxGold1KG = new KrxGold1KG();
     krxGold1KG.convertToJson(
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data/krx-gold-2024-2025.csv",
-        "/Users/dongvin99/Documents/Macro-Economy-Board/raw-data"
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\krx-gold-2024-2025.csv",
+        "C:\\dev\\Macro-Economy-Board\\raw-data\\"
     );*/
 
   }// end of main
