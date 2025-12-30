@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\btc_daily_data_this_year.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\kosdaq_index_this_year.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\kr-base-interest-rate-record.csv">
           <value>
             <Attribute>
@@ -11,6 +25,13 @@
           </value>
         </entry>
         <entry key="\nasdaq_daily_data_this_year.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\snp500_daily_data_this_year.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

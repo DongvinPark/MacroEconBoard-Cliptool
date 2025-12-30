@@ -1,4 +1,4 @@
-package script_for_raw_data_api;
+package script;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -36,6 +36,8 @@ public class PythonScriptRunner {
             pythonVersion,
             scriptFileDir
         );
+
+        pb.directory(new File(this.scriptRootDir));
 
         pb.redirectErrorStream(true);
         Process process = pb.start();

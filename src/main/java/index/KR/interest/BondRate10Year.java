@@ -99,8 +99,12 @@ public class BondRate10Year implements Index {
               year + BOND_10_YEAR_JSON_SUFFIX + JSON_EXTENSION
           );
 
-          try(Writer writer = Files.newBufferedWriter(outputFile)){
-            gson.toJson(yearJsonData, writer);
+          // 과거 데이터는 전부 만들었으므로, 2025/12/30 부터는 올해 꺼만 새로 만들면 된다.
+          LocalDate today = LocalDate.now();
+          if(year == today.getYear()){
+            try(Writer writer = Files.newBufferedWriter(outputFile)){
+              gson.toJson(yearJsonData, writer);
+            }
           }
         }
       }
