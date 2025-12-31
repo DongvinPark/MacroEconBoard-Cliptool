@@ -99,10 +99,13 @@ public class KrxGold1KG implements Index {
 
         Path outputFile = outputDir.resolve(year + KRX_GOLD_1KG_JSON_SUFFIX + JSON_EXTENSION);
 
-        try(Writer writer = Files.newBufferedWriter(outputFile, StandardCharsets.UTF_8)){
-          gson.toJson(yearData, writer);
+        // 과거 데이터는 전부 만들었으므로, 2025/12/30 부터는 올해 꺼만 새로 만들면 된다.
+        LocalDate today = LocalDate.now();
+        if(year == today.getYear()){
+          try(Writer writer = Files.newBufferedWriter(outputFile, StandardCharsets.UTF_8)){
+            gson.toJson(yearData, writer);
+          }
         }
-
       }
 
       Logger.info("csv to json translation completed. dir : " + outputDir);
