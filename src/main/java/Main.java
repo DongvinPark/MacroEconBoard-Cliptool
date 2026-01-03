@@ -19,7 +19,7 @@ public class Main {
             "07-comex-gold-future.py"
         )
     );
-    boolean dataFetchingResult = scriptRunner.runPythonDataFetchingScrips();
+    boolean dataFetchingResult = scriptRunner.runPythonDataFetchingScrips(2025);
     Logger.warn("API Fetching result : " + dataFetchingResult);
 
     JsonUpdator jsonUpdator = new JsonUpdator();

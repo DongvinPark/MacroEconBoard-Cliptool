@@ -21,20 +21,16 @@ public class PythonScriptRunner {
     this.scriptFileNameList = fileNameList;
   }
 
-  public boolean runPythonDataFetchingScrips(){
+  public boolean runPythonDataFetchingScrips(int year){
     try {
-      String pythonVersion;
+      String pythonVersion = "python";
       for(String scriptName : scriptFileNameList){
-        if(scriptName.contains(KOSPI_JSON_SUFFIX) || scriptName.contains(KOSDAQ_JSON_SUFFIX)){
-          pythonVersion = "python3";
-        } else {
-          pythonVersion = "python";
-        }
 
         String scriptFileDir = scriptRootDir + File.separator + scriptName;
         ProcessBuilder pb = new ProcessBuilder(
             pythonVersion,
-            scriptFileDir
+            scriptFileDir,
+            String.valueOf(year)
         );
 
         pb.directory(new File(this.scriptRootDir));

@@ -65,7 +65,7 @@ public class JsonUpdator {
 
       KrxGold1KG krxGold1KG = new KrxGold1KG();
       boolean krGold1KgResult = krxGold1KG.convertToJson(
-          "C:\\dev\\Macro-Economy-Board\\raw-data\\krx-raw-this-year.csv",
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\krx-raw.csv",
           "C:\\dev\\Macro-Economy-Board\\raw-data"
       );
       Logger.warn("KRX Gold 1KG Spot result : " + krGold1KgResult);

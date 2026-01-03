@@ -67,7 +67,7 @@ public class Kosdaq implements Index {
             continue;
           }
 
-          String dateStr = tokens[0];
+          String dateStr = tokens[0].split(" ")[0];
           LocalDate date = LocalDate.parse(dateStr);
           int year = date.getYear();
 
