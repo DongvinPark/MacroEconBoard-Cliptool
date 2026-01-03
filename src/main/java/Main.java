@@ -19,7 +19,9 @@ public class Main {
             "07-comex-gold-future.py"
         )
     );
-    boolean dataFetchingResult = scriptRunner.runPythonDataFetchingScrips(2025);
+
+    boolean dataFetchingResult
+        = scriptRunner.runPythonDataFetchingScrips(2025);// TODO : 여기서 연도를 수동으로 바꿔준다.
     Logger.warn("API Fetching result : " + dataFetchingResult);
 
     JsonUpdator jsonUpdator = new JsonUpdator();
