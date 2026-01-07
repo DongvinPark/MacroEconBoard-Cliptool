@@ -14,6 +14,7 @@ import index.Index;
 import index.KR.dto.BondDto;
 import index.KR.dto.BondDtoForJson;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -115,6 +116,14 @@ public class BondRate3Year implements Index {
     } catch (Exception e){
       e.printStackTrace();
       return false;
+    } finally {
+      File csvToRemove = new File(csvPath);
+      boolean removeResult = csvToRemove.delete();
+      if(!removeResult){
+        Logger.error("Failed to remove csv file ! : " + csvPath);
+      } else {
+        Logger.info("Removed csv file : " + csvPath);
+      }
     }
   }
 

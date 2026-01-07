@@ -127,6 +127,14 @@ public class WonDollar implements Index {
     } catch (Exception e){
       e.printStackTrace();
       return false;
+    } finally {
+      File csvToRemove = new File(csvPath);
+      boolean removeResult = csvToRemove.delete();
+      if(!removeResult){
+        Logger.error("Failed to remove csv file ! : " + csvPath);
+      } else {
+        Logger.info("Removed csv file : " + csvPath);
+      }
     }
   }
 
