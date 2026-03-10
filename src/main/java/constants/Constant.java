@@ -87,4 +87,9 @@ public class Constant {
   public static final String COMEX_GOLD_FUTURE = "gold-price-comex";
   public static final int GOLD_FUTURE_CSV_HEADER_LENGTH = 2;
   public static final String GOLD_FUTURE_JSON_SUFFIX = "-gold-price-comex";
+
+  // UK Brent Crude Oil Future
+  public static final String BRENT_OIL_FUTURE = "brent-crude-oil-futures";
+  public static final int BRENT_OIL_FUTURE_CSV_HEADER_LENGTH = 2;
+  public static final String BRENT_OIL_FUTURE_JSON_SUFFIX = "-brent-crude-oil-futures";
 }

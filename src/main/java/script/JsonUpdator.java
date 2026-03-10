@@ -7,6 +7,7 @@ import index.KR.interest.BondRate3Year;
 import index.KR.raw_materials.KrxGold1KG;
 import index.KR.stock.Kosdaq;
 import index.KR.stock.Kospi;
+import index.UK.raw_materials.BrentCrudeOilFuture;
 import index.US.interest.FederalFundsRate;
 import index.US.interest.UsBondRate10Year;
 import index.US.interest.UsBondRate3Year;
@@ -27,6 +28,7 @@ public class JsonUpdator {
       = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\kr";
   private static final String US_THIS_YEAR_ROOT_PATH
       = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\us";
+  private static final String UK_THIS_YEAR_ROOT_PATH = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\uk";
 
   public boolean buildThisYearJsonFiles(){
     try {
@@ -127,6 +129,13 @@ public class JsonUpdator {
           US_THIS_YEAR_ROOT_PATH + File.separator + COMEX_GOLD_FUTURE
       );
       Logger.warn("COMEX Gold Future result : " + comexGoldResult);
+
+      BrentCrudeOilFuture brentCrudeOilFuture = new BrentCrudeOilFuture();
+      boolean brentCrudeOilFutureResult = brentCrudeOilFuture.convertToJson(
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\brent_oil_future_this_year.csv",
+          UK_THIS_YEAR_ROOT_PATH + File.separator + BRENT_OIL_FUTURE
+      );
+      Logger.warn("Brent Crude Oil Future result : " + brentCrudeOilFutureResult);
 
       return true;
     } catch (Exception e){
