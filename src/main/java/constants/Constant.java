@@ -97,6 +97,11 @@ public class Constant {
   public static final String US_M2_MONEY_SUPPLY = "m2-liquidity";
   public static final int US_M2_MONEY_SUPPLY_CSV_HEADER_LENGTH = 2;
   public static final String US_M2_MONEY_SUPPLY_JSON_SUFFIX = "-m2-liquidity";
+
+  // US Dollar Index
+  public static final String US_DOLLAR_INDEX = "dollar-index";
+  public static final int US_DOLLAR_INDEX_CSV_HEADER_LENGTH = 2;
+  public static final String US_DOLLAR_INDEX_JSON_SUFFIX = "-dollar-index";
 }
 
 

@@ -18,7 +18,8 @@ public class Main {
             "06-fred-interest-rates.py",
             "07-comex-gold-future.py",
             "08-brent-oil-future.py",
-            "09-m2.py"
+            "09-m2.py",
+            "10-dollar-index.py"
         )
     );
 

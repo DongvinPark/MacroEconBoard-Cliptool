@@ -7,6 +7,7 @@ import index.KR.interest.BondRate3Year;
 import index.KR.raw_materials.KrxGold1KG;
 import index.KR.stock.Kosdaq;
 import index.KR.stock.Kospi;
+import index.MARKET_CONDITION.liquid.dollar_index.DollarIndex;
 import index.MARKET_CONDITION.liquid.m2_money.M2MoneySupply;
 import index.UK.raw_materials.BrentCrudeOilFuture;
 import index.US.interest.FederalFundsRate;
@@ -147,6 +148,13 @@ public class JsonUpdator {
           MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_M2_MONEY_SUPPLY
       );
       Logger.warn("US M2 Money Supply result : " + m2MoneySupplyResult);
+
+      DollarIndex dollarIndex = new DollarIndex();
+      boolean dollarIndexResult = dollarIndex.convertToJson(
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\dollar_index_this_year.csv",
+          MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_DOLLAR_INDEX
+      );
+      Logger.warn("US Dollar Index result : " + dollarIndexResult);
 
       return true;
     } catch (Exception e){
