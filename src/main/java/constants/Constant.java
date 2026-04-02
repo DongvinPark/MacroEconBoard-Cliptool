@@ -92,4 +92,39 @@ public class Constant {
   public static final String BRENT_OIL_FUTURE = "brent-crude-oil-futures";
   public static final int BRENT_OIL_FUTURE_CSV_HEADER_LENGTH = 2;
   public static final String BRENT_OIL_FUTURE_JSON_SUFFIX = "-brent-crude-oil-futures";
+
+  // US M2 Money Supply
+  public static final String US_M2_MONEY_SUPPLY = "m2-liquidity";
+  public static final int US_M2_MONEY_SUPPLY_CSV_HEADER_LENGTH = 2;
+  public static final String US_M2_MONEY_SUPPLY_JSON_SUFFIX = "-m2-liquidity";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,7 @@ import index.KR.interest.BondRate3Year;
 import index.KR.raw_materials.KrxGold1KG;
 import index.KR.stock.Kosdaq;
 import index.KR.stock.Kospi;
+import index.MARKET_CONDITION.liquid.m2_money.M2MoneySupply;
 import index.UK.raw_materials.BrentCrudeOilFuture;
 import index.US.interest.FederalFundsRate;
 import index.US.interest.UsBondRate10Year;
@@ -28,7 +29,10 @@ public class JsonUpdator {
       = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\kr";
   private static final String US_THIS_YEAR_ROOT_PATH
       = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\us";
-  private static final String UK_THIS_YEAR_ROOT_PATH = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\uk";
+  private static final String UK_THIS_YEAR_ROOT_PATH
+      = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\uk";
+  private static final String MARKET_CONDITION_THIS_YEAR_ROOT_PATH
+      = "???";
 
   public boolean buildThisYearJsonFiles(){
     try {
@@ -136,6 +140,13 @@ public class JsonUpdator {
           UK_THIS_YEAR_ROOT_PATH + File.separator + BRENT_OIL_FUTURE
       );
       Logger.warn("Brent Crude Oil Future result : " + brentCrudeOilFutureResult);
+
+      M2MoneySupply m2MoneySupply = new M2MoneySupply();
+      boolean m2MoneySupplyResult = m2MoneySupply.convertToJson(
+          "??",
+          MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_M2_MONEY_SUPPLY
+      );
+      Logger.warn("US M2 Money Supply result : " + m2MoneySupplyResult);
 
       return true;
     } catch (Exception e){
