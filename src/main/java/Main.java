@@ -17,12 +17,13 @@ public class Main {
             "05-nasdaq-test.py",
             "06-fred-interest-rates.py",
             "07-comex-gold-future.py",
-            "08-brent-oil-future.py"
+            "08-brent-oil-future.py",
+            "09-m2.py"
         )
     );
 
     boolean dataFetchingResult
-        = scriptRunner.runPythonDataFetchingScrips(2026);// TODO : 여기서 연도를 수동으로 바꿔준다.
+        = scriptRunner.runPythonDataFetchingScrips(2026);//TODO : 여기서 연도를 수동으로 바꿔준다.
     Logger.warn("API Fetching result : " + dataFetchingResult);
 
     JsonUpdator jsonUpdator = new JsonUpdator();

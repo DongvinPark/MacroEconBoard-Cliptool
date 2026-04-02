@@ -32,7 +32,7 @@ public class JsonUpdator {
   private static final String UK_THIS_YEAR_ROOT_PATH
       = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\uk";
   private static final String MARKET_CONDITION_THIS_YEAR_ROOT_PATH
-      = "???";
+      = "C:\\dev\\Macro-Economy-Board\\macro-econ-board-origin-storage\\this-year\\market";
 
   public boolean buildThisYearJsonFiles(){
     try {
@@ -143,7 +143,7 @@ public class JsonUpdator {
 
       M2MoneySupply m2MoneySupply = new M2MoneySupply();
       boolean m2MoneySupplyResult = m2MoneySupply.convertToJson(
-          "??",
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\m2_money_this_year.csv",
           MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_M2_MONEY_SUPPLY
       );
       Logger.warn("US M2 Money Supply result : " + m2MoneySupplyResult);
