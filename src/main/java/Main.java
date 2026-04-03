@@ -19,7 +19,8 @@ public class Main {
             "07-comex-gold-future.py",
             "08-brent-oil-future.py",
             "09-m2.py",
-            "10-dollar-index.py"
+            "10-dollar-index.py",
+            "11-us-bank-all-credit.py"
         )
     );
 

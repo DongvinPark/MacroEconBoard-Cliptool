@@ -102,6 +102,11 @@ public class Constant {
   public static final String US_DOLLAR_INDEX = "dollar-index";
   public static final int US_DOLLAR_INDEX_CSV_HEADER_LENGTH = 2;
   public static final String US_DOLLAR_INDEX_JSON_SUFFIX = "-dollar-index";
+
+  // US Commercial Back Total Credit
+  public static final String US_BANK_TOTAL_CREDIT = "us-all-bank-credit";
+  public static final int US_BANK_TOTAL_CREDIT_CSV_HEADER_LENGTH = 2;
+  public static final String US_BANK_TOTAL_CREDIT_JSON_SUFFIX = "-us-all-bank-credit";
 }
 
 

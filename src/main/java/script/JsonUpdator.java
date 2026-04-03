@@ -7,6 +7,7 @@ import index.KR.interest.BondRate3Year;
 import index.KR.raw_materials.KrxGold1KG;
 import index.KR.stock.Kosdaq;
 import index.KR.stock.Kospi;
+import index.MARKET_CONDITION.liquid.bank_lending.UsBankTotalCredit;
 import index.MARKET_CONDITION.liquid.dollar_index.DollarIndex;
 import index.MARKET_CONDITION.liquid.m2_money.M2MoneySupply;
 import index.UK.raw_materials.BrentCrudeOilFuture;
@@ -155,6 +156,13 @@ public class JsonUpdator {
           MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_DOLLAR_INDEX
       );
       Logger.warn("US Dollar Index result : " + dollarIndexResult);
+
+      UsBankTotalCredit usBankTotalCredit = new UsBankTotalCredit();
+      boolean usBankTotalCreditResult = usBankTotalCredit.convertToJson(
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\total_bank_credit_this_year.csv",
+          MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_BANK_TOTAL_CREDIT
+      );
+      Logger.warn("US Dollar Index result : " + usBankTotalCreditResult);
 
       return true;
     } catch (Exception e){
