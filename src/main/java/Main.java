@@ -20,7 +20,11 @@ public class Main {
             "08-brent-oil-future.py",
             "09-m2.py",
             "10-dollar-index.py",
-            "11-us-bank-all-credit.py"
+            "11-us-bank-all-credit.py",
+            "12-us-bond-10y-minus-2y.py",
+            "13-us-high-yield-spread.py",
+            "14-us-baa-corpo-yield-spread.py",
+            "15-us-vix.py"
         )
     );
 

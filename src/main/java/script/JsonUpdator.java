@@ -10,6 +10,10 @@ import index.KR.stock.Kospi;
 import index.MARKET_CONDITION.liquid.bank_lending.UsBankTotalCredit;
 import index.MARKET_CONDITION.liquid.dollar_index.DollarIndex;
 import index.MARKET_CONDITION.liquid.m2_money.M2MoneySupply;
+import index.MARKET_CONDITION.risk.corpo_bond_spread.UsCorporateBondSpread;
+import index.MARKET_CONDITION.risk.high_yield_spread.UsHighYieldSpread;
+import index.MARKET_CONDITION.risk.tenY_twoY_diff.TenYearTwoYearSpread;
+import index.MARKET_CONDITION.risk.vix.UsVix;
 import index.UK.raw_materials.BrentCrudeOilFuture;
 import index.US.interest.FederalFundsRate;
 import index.US.interest.UsBondRate10Year;
@@ -163,6 +167,34 @@ public class JsonUpdator {
           MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_BANK_TOTAL_CREDIT
       );
       Logger.warn("US Dollar Index result : " + usBankTotalCreditResult);
+
+      TenYearTwoYearSpread tenYearTwoYearSpread = new TenYearTwoYearSpread();
+      boolean tenYeartwoYearSpreadResult = tenYearTwoYearSpread.convertToJson(
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\bond_10y_minus_2y_this_year.csv",
+          MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_10Y_MINUS_2Y_DIFF
+      );
+      Logger.warn("US 10Y - 2Y Spread result : " + tenYeartwoYearSpreadResult);
+
+      UsHighYieldSpread usHighYieldSpread = new UsHighYieldSpread();
+      boolean usHighYieldSpreadResult = usHighYieldSpread.convertToJson(
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\high_yield_spread_this_year.csv",
+          MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_HIGH_YIELD_SPREAD
+      );
+      Logger.warn("US High Yield Spread result : " + usHighYieldSpreadResult);
+
+      UsCorporateBondSpread usCorporateBondSpread = new UsCorporateBondSpread();
+      boolean usCorporateBondSpreadResult = usCorporateBondSpread.convertToJson(
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\baa_corpo_yield_spread_this_year.csv",
+          MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_BAA_CORPORATE_SPREAD
+      );
+      Logger.warn("US BAA- Corporate Bond Spread result : " + usCorporateBondSpreadResult);
+
+      UsVix usVix = new UsVix();
+      boolean vixResult = usVix.convertToJson(
+          "C:\\dev\\Macro-Economy-Board\\raw-data\\vix_this_year.csv",
+          MARKET_CONDITION_THIS_YEAR_ROOT_PATH + File.separator + US_VIX
+      );
+      Logger.warn("US VIX result : " + vixResult);
 
       return true;
     } catch (Exception e){

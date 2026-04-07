@@ -107,6 +107,26 @@ public class Constant {
   public static final String US_BANK_TOTAL_CREDIT = "us-all-bank-credit";
   public static final int US_BANK_TOTAL_CREDIT_CSV_HEADER_LENGTH = 2;
   public static final String US_BANK_TOTAL_CREDIT_JSON_SUFFIX = "-us-all-bank-credit";
+
+  // US 10Y  & 2Y bond yield difference
+  public static final String US_10Y_MINUS_2Y_DIFF = "10y-2y-diff";
+  public static final int US_10Y_MINUS_2Y_DIFF_CSV_HEADER_LENGTH = 2;
+  public static final String US_10Y_MINUS_2Y_DIFF_JSON_SUFFIX = "-10y-2y-diff";
+
+  // US High Yield Spread
+  public static final String US_HIGH_YIELD_SPREAD = "high-yield-spread";
+  public static final int US_HIGH_YIELD_SPREAD_CSV_HEADER_LENGTH = 2;
+  public static final String US_HIGH_YIELD_SPREAD_JSON_SUFFIX = "-high-yield-spread";
+
+  // US BAA-Grade Corporate Yield Spread
+  public static final String US_BAA_CORPORATE_SPREAD = "corporate-bond-spread";
+  public static final int US_BAA_CORPORATE_SPREAD_CSV_HEADER_LENGTH = 2;
+  public static final String US_BAA_CORPORATE_SPREAD_JSON_SUFFIX = "-corporate-bond-spread";
+
+  // US VIX Index
+  public static final String US_VIX = "vix";
+  public static final int US_VIX_CSV_HEADER_LENGTH = 2;
+  public static final String US_VIX_JSON_SUFFIX = "-vix";
 }
 
 
