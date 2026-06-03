@@ -5,8 +5,7 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import static constants.Constant.KOSDAQ_JSON_SUFFIX;
-import static constants.Constant.KOSPI_JSON_SUFFIX;
+import static constants.Constant.PYTHON_SCRIPT_INTERVAL_MS;
 
 public class PythonScriptRunner {
 
@@ -48,6 +47,14 @@ public class PythonScriptRunner {
 
         int exitCode = process.waitFor();
         System.out.println("Exit code for " + scriptName + " : " + exitCode);
+
+        // [추가] FRED 서버의 Rate Limit을 회피하기 위해 프로세스 간 일정 시간동안 휴식.
+        try {
+          Thread.sleep(PYTHON_SCRIPT_INTERVAL_MS);
+        } catch (InterruptedException ie) {
+          ie.printStackTrace();
+          Thread.currentThread().interrupt();
+        }
       }//for
 
       return true;

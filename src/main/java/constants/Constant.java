@@ -2,6 +2,8 @@ package constants;
 
 public class Constant {
 
+  public static final int PYTHON_SCRIPT_INTERVAL_MS = 5000;
+
   public static final String EMPTY_STR = "";
 
   public static final String CSV_EXTENSION = ".csv";
