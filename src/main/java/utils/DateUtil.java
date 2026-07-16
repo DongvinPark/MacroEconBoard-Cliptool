@@ -27,4 +27,13 @@ public class DateUtil {
   public static List<LocalDate> getRangeDate(LocalDate start, LocalDate end) {
     return start.datesUntil(end).toList();
   }
+
+  /**
+   * startDate와 endDate를 모두 포함하는 [s, e] 폐구간 LocalDate 리스트를 리턴한다.
+   * */
+  public static List<LocalDate> getRangeDateClosed(LocalDate start, LocalDate end){
+    List<LocalDate> resultList = new ArrayList<>(start.datesUntil(end).toList());
+    resultList.add(end);
+    return resultList;
+  }
 }

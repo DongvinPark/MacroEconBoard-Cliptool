@@ -18,6 +18,7 @@ import java.util.*;
 
 import static constants.Constant.*;
 import static utils.DateUtil.getRangeDate;
+import static utils.DateUtil.getRangeDateClosed;
 import static utils.General.getDoubleVal;
 import static utils.General.removeQuotationMarks;
 
@@ -47,6 +48,7 @@ public class BaseInterestRate implements Index {
           String monthAndDateStr = removeQuotationMarks(tokens[1]);
           String interestVal = removeQuotationMarks(tokens[2]);
           LocalDate date = LocalDate.parse(yearStr + "-" + monthAndDateStr);
+          System.out.println("Kor base rate : date !!! " + date);
 
           interestChangeRecordList.add(
               new BaseInterestDto(date, getDoubleVal(interestVal))
@@ -116,7 +118,7 @@ public class BaseInterestRate implements Index {
         targetDates = getRangeDate(start, end);
       } else {
         LocalDate today = LocalDate.now(ZoneId.of("Asia/Seoul"));
-        targetDates = getRangeDate(start, today);
+        targetDates = getRangeDateClosed(start, today);
       }
 
       for(LocalDate date : targetDates){
